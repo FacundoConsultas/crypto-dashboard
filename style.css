@@ -1,0 +1,84 @@
+:root {
+    --bg-color: #0b0e11;
+    --card-bg: #181a20;
+    --text-main: #eaecef;
+    --text-dim: #848e9c;
+    --accent: #f0b90b;
+    --up-color: #02c076;
+    --down-color: #f84960;
+    --border: #2b3139;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 20px;
+}
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+header { text-align: center; margin-bottom: 30px; }
+.badge { background: var(--accent); color: black; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; vertical-align: middle; }
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.search-box { display: flex; gap: 8px; margin-bottom: 20px; }
+
+#coin-search {
+    flex: 1;
+    padding: 12px;
+    background: #1e2329;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+#search-btn {
+    padding: 12px 20px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.table-wrapper { overflow-y: auto; max-height: 500px; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; color: var(--text-dim); font-size: 0.85rem; padding-bottom: 12px; position: sticky; top: 0; background: var(--card-bg); }
+td { padding: 16px 0; border-top: 1px solid var(--border); font-size: 0.95rem; }
+
+.price-up { color: var(--up-color); }
+.price-down { color: var(--down-color); }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+    padding: 20px;
+    background: #2b3139;
+    border-radius: 12px;
+}
+
+.stat-item span { color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 5px; }
+.stat-item b { font-size: 0.9rem; color: var(--text-main); }
+
+.chart-wrapper { position: relative; height: 350px; width: 100%; }
+
+@media (max-width: 900px) {
+    .main-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Terminal Pro | Facundo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Crypto Terminal <span class="badge">PRO</span></h1>
+            <p>Mercado Global en Tiempo Real (USD)</p>
+        </header>
+
+        <div class="main-grid">
+            <section class="card">
+                <div class="search-box">
+                    <input type="text" id="coin-search" placeholder="Buscar moneda (ej: solana)">
+                    <button id="search-btn">🔍</button>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Moneda</th>
+                                <th>Precio (USD)</th>
+                                <th>24h %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crypto-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="card">
+                <div id="coin-info-header">
+                    <h2 id="selected-coin-name">Iniciando terminal...</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span>Market Cap</span>
+                            <b id="market-cap">$0</b>
+                        </div>
+                        <div class="stat-item">
+                            <span>Volumen (24h)</span>
+                            <b id="volume">$0</b>
+                        </div>
+                        <div class="stat-item">
+                            <span>Máximo (24h)</span>
+                            <b id="high-24h">$0</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
